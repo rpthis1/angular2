@@ -4,6 +4,7 @@ import {bootstrap} from 'angular2/platform/browser';
 //import {ControlMessages} from './control-messages.component';
 
 
+
 @Component({
     selector: 'my-app',
     template: '<h1>My First Angular 99 App</h1>'
