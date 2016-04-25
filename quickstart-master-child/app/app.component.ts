@@ -2,22 +2,22 @@ import {Component, ViewChild, AfterViewInit} from 'angular2/core';
 
 
 @Component({
-selector: 'child',
-template: `<h3>Child</h3>`
+    selector: 'child',
+    template: `<h3>Child</h3>`
 
 })
 class Child {
-greet(name) {
-console.log(`Hello from ${name}.`);
-}
+    greet(name) {
+        console.log(`Hello from ${name}.`);
+    }
 }
 
 
 
 @Component({
-selector: 'app',
-directives: [Child],
-template: `
+    selector: 'app',
+    directives: [Child],
+    template: `
 <h1>Parent</h1>
 <child #child1></child>
 <child #child2></child>
@@ -26,10 +26,10 @@ template: `
 
 ` })
 export class AppComponent implements AfterViewInit {
-@ViewChild('child1')
-firstChild: Child;
+    @ViewChild('child1')
+    firstChild: Child;
 
-ngAfterViewInit() {
-this.firstChild.greet('Child 1');
-}
+    ngAfterViewInit() {
+        this.firstChild.greet('Child 1');
+    }
 }
