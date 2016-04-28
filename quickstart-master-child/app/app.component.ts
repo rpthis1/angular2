@@ -21,7 +21,6 @@ class Child {
 <h1>Parent</h1>
 <child #child1></child>
 <child #child2></child>
-
 <button (click)="child2.greet('Child 2')">Invoke greet() on child 2</button>
 
 ` })
