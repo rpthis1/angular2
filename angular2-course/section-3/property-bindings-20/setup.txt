@@ -1,0 +1,40 @@
+ng2-bootstrap.
+
+1) set up moment.js some component like Alert is using moment.js 
+  - typings install moment --save
+  - npm install moment --save
+<!-- index.html -->
+  System.config({
+    packages: {
+      app: {
+        format: 'register',
+        defaultExtension: 'js'
+      }
+    },
+    map: {
+      moment: 'node_modules/moment/moment.js'
+    }
+  });
+  
+  2) follow these instructions.
+  
+  https://github.com/valor-software/ng2-bootstrap#quick-start
+  
+  3) import ng2-bootstrap in this fashion
+  
+  import {Component} from 'angular2/core';
+import {Alert} from 'ng2-bootstrap/ng2-bootstrap';
+
+@Component({
+  selector: 'my-app',
+  directives: [Alert],
+  template: `<alert type="info">ng2-bootstrap hello world!</alert>`
+})
+export class AppComponent {
+}
+
+
+4) upgrade to angular 2 bet19 by changin the package.config and runing npm install agaion.
+
+5) install typings
+6) install 
