@@ -6,17 +6,16 @@ import {
   
 } from 'angular2/core';
 
-
 import {  CORE_DIRECTIVES} from 'angular2/common'
-//import { System } from 'systemjs'
 
-//var System = require('systemjs');
 
 
 class MyComponentLoader {
   loadComponentConfig(url){
+    
+    debugger;
       
-    // return fetch(url)
+    // return window.fetch(url)
     //   .then(res => res.json())
     //   .then(componentList => 
     //     Promise.all(componentList.map(config => 
@@ -45,7 +44,7 @@ export class ContainerComponent {
       elementRef:ElementRef,
       @Attribute('src') configPath) {
         
-        // myLoader.loadComponentConfig(configPath)
+         myLoader.loadComponentConfig(configPath)
         //   .then(components => 
         //     Promise.all(components.map(comp => 
         //       loader.loadIntoLocation(comp,elementRef,'content'))));
